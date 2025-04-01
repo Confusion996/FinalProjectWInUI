@@ -13,10 +13,12 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
   <ItemGroup>
+    <None Remove="Controls\LoginForm.xaml" />
     <None Remove="Controls\ReusableGrid.xaml" />
     <None Remove="Pages\BlankPage1.xaml" />
     <None Remove="Pages\BuyPage.xaml" />
     <None Remove="Pages\PlansPage.xaml" />
+    <None Remove="Pages\UserAccountPage.xaml" />
   </ItemGroup>
 
   <ItemGroup>
@@ -57,6 +59,16 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Assets\NewFolder\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Controls\LoginForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Page Update="Pages\UserAccountPage.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Page Update="Pages\BuyPage.xaml">

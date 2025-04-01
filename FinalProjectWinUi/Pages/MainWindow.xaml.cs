@@ -23,12 +23,12 @@ namespace FinalProjectWinUi
             var hwnd = WinRT.Interop.WindowNative.GetWindowHandle(this);
             var windowId = Win32Interop.GetWindowIdFromWindow(hwnd);
             var appWindow = AppWindow.GetFromWindowId(windowId);
-            if (appWindow.Presenter is OverlappedPresenter presenter)
+            var presenter = appWindow.Presenter as OverlappedPresenter;
+            if (presenter != null)
             {
                 presenter.Maximize();
             }
         }
-
 
         private void NavView_SelectionChanged(NavigationView sender, NavigationViewSelectionChangedEventArgs args)
         {
@@ -41,6 +41,7 @@ namespace FinalProjectWinUi
                     "HomePage" => typeof(HomePage),
                     "PlansPage" => typeof(PlansPage),
                     "BuyPage" => typeof(BuyPage),
+                    "UserAccountPage" => typeof(UserAccountPage),
                     _ => null
                 };
 
@@ -50,7 +51,7 @@ namespace FinalProjectWinUi
                 }
             }
         }
-
     }
 }
+
 
